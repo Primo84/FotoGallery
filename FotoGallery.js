@@ -268,13 +268,13 @@ function imgEnt(event)
      const divEl = event.target;
 
      if(divEl.className == "R_Scroll")
-        divEl.src = "./Icons/R_Scroll_s.png";
+        divEl.src = "https://primo84.github.io/FotoGallery/Icons/R_Scroll_s.png";
     else if(divEl.className == "L_Scroll")
-        divEl.src = "./Icons/L_Scroll_s.png";
+        divEl.src = "https://primo84.github.io/FotoGallery/Icons/L_Scroll_s.png";
     else if(divEl.className == "R_Arrow")
-        divEl.src = "./Icons/R_Arrow_s.png";
+        divEl.src = "https://primo84.github.io/FotoGallery/Icons/R_Arrow_s.png";
     else if(divEl.className == "L_Arrow")
-        divEl.src = "./Icons/L_Arrow_s.png";
+        divEl.src = "https://primo84.github.io/FotoGallery/Icons/L_Arrow_s.png";
     
 }
 
@@ -283,13 +283,13 @@ function imgLeave(event)
     const divEl = event.target;
 
      if(divEl.className == "R_Scroll")
-        divEl.src = "./Icons/R_Scroll_ns.png";
+        divEl.src = "https://primo84.github.io/FotoGallery/Icons/R_Scroll_ns.png";
     else if(divEl.className == "L_Scroll")
-        divEl.src = "./Icons/L_Scroll_ns.png";
+        divEl.src = "https://primo84.github.io/FotoGallery/Icons/L_Scroll_ns.png";
     else if(divEl.className == "R_Arrow")
-        divEl.src = "./Icons/R_Arrow_ns.png";
+        divEl.src = "https://primo84.github.io/FotoGallery/Icons/R_Arrow_ns.png";
     else if(divEl.className == "L_Arrow")
-        divEl.src = "./Icons/L_Arrow_ns.png";
+        divEl.src = "https://primo84.github.io/FotoGallery/Icons/L_Arrow_ns.png";
     
 }
 
@@ -592,7 +592,7 @@ $.fn.InitGallery = function(ImgSrc = [], GalleryAttr={
             // Append scrools to large image div element
 
 
-    $divObj.append("<div class = 'R_Scroll'><img class = 'R_Scroll' src = './Icons/R_Scroll_ns.png'></div>");
+    $divObj.append("<div class = 'R_Scroll'><img class = 'R_Scroll' src = 'https://primo84.github.io/FotoGallery/Icons/R_Scroll_ns.png'></div>");
 
 
     $divRScroll = $('div.R_Scroll');
@@ -606,7 +606,7 @@ $.fn.InitGallery = function(ImgSrc = [], GalleryAttr={
     }).click(mouseclick).hover(imgEnt, imgLeave);
 
 
-    $divObj.append("<div class = 'L_Scroll'><img class = 'L_Scroll' src = './Icons/L_Scroll_ns.png'></div>");
+    $divObj.append("<div class = 'L_Scroll'><img class = 'L_Scroll' src = 'https://primo84.github.io/FotoGallery/Icons/L_Scroll_ns.png'></div>");
 
 
     $divLScroll = $('div.L_Scroll');
@@ -624,8 +624,8 @@ $.fn.InitGallery = function(ImgSrc = [], GalleryAttr={
 
 
 
-    $divFoot.append("<div class = 'R_Arrow'><img class = 'R_Arrow' src = './Icons/R_Arrow_ns.png'></div>");
-    $divFoot.append("<div class = 'L_Arrow'><img class = 'L_Arrow' src = './Icons/L_Arrow_ns.png'></div>");
+    $divFoot.append("<div class = 'R_Arrow'><img class = 'R_Arrow' src = 'https://primo84.github.io/FotoGallery/Icons/R_Arrow_ns.png'></div>");
+    $divFoot.append("<div class = 'L_Arrow'><img class = 'L_Arrow' src = 'https://primo84.github.io/FotoGallery/Icons/L_Arrow_ns.png'></div>");
 
 
 
