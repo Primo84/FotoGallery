@@ -1,0 +1,115 @@
+
+div.FotoGallery
+{
+    position : relative;
+    left : 42px; top : 40px;
+    /* background-color : rgb(28, 27, 27); */
+    background-color : rgb(7 ,7 ,7);
+    border : 8px solid rgb(20, 18, 22);
+    overflow : hidden;
+}
+
+div.FotoGallery img
+{
+    position : absolute;
+    left : 0px; top :0px; width : 100%; height : 100%;
+
+}
+
+div.MiniSlider img
+{
+    position : absolute;
+    left : 0px; top :0px; width : 100%; height : 100%;
+
+}
+
+
+span.FotoGallery_Header
+{
+    position : absolute;
+    left : 42px; top : 0px; height : 33px;
+    border-top-left-radius : 8px;
+    border-top-right-radius : 8px;
+    background-color : rgb(34, 33, 35);
+    color : rgb(239, 229, 229);
+    font-size : 16px;
+    padding-top : 7px;
+    text-align : center;
+}
+
+div.FotoGallery_Footer
+{
+    position : absolute;
+    left : 42px; height : 40px;
+    border : 0px solid rgb(194, 203, 194);
+    border-bottom-left-radius : 8px;
+    border-bottom-right-radius : 8px;
+    background-color : rgb(34, 33, 35);
+}
+
+
+div.R_Arrow
+{
+    position : absolute;
+    left : 52%; top :25% ; width : 5%; height : 50%; 
+    border : 0px solid yellow;
+}
+
+div.R_Arrow img
+{
+    position : absolute;
+    /* opacity : 0.64; */
+    left : 0px; top : 0px; width : 100%; height : 100%;
+    /* display : none; */
+    cursor : pointer;
+
+}
+
+div.L_Arrow
+{
+    position : absolute;
+    left : 43%; top :25% ; width : 5%; height : 50%; 
+    border : 0px solid yellow;
+}
+
+div.L_Arrow img
+{
+    position : absolute;
+    /* opacity : 0.64; */
+    left : 0px; top : 0px; width : 100%; height : 100%;
+    /* display : none; */
+    cursor : pointer;
+
+}
+
+div.R_Scroll
+{
+    position : absolute;
+    left : 70% ; top : 20%; width : 30%; height : 60%;
+    border : 0px solid yellow;
+
+}
+
+div.R_Scroll img
+{
+    position : absolute;
+    /* opacity : 0.64; */
+    display : none;
+    cursor : pointer;
+}
+
+div.L_Scroll
+{
+    position : absolute;
+    left : 0px ; top : 20%; width : 30%; height : 60%;
+    border : 0px solid yellow;
+
+}
+
+div.L_Scroll img
+{
+    position : absolute;
+    /* opacity : 0.64; */
+    display : none;
+    cursor : pointer;
+}
