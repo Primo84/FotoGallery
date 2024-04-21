@@ -1,12 +1,24 @@
 #FotoGallery
 
+
+Click link below to see how it's work...
+
+    https://www.piccante.opole.pl/Galery.html
+
+
+Here is a full code a FotoGallery component....
+
+    https://github.com/Primo84/FotoGallery.git
+        
+
+
 FotoGallery is a component to create a images view scroller.
 
 It's created from JavaScript and JQuery code.
 
 To use must join JQuery libs first, and FotoGalerry.js and FotoGallery.css files.
 
-Below is example how join mantadory files and libs for use a FotoGallery component.
+Below is example how join mantadory files and libs to use a FotoGallery component.
 
         ***Join JQuery and FotoGallery libs example***
 
@@ -21,14 +33,14 @@ Below is example how join mantadory files and libs for use a FotoGallery compone
 
 Gallery component is created by calling InitGallery(...) function from  JQuery div selector.
 
-First must created a div object and then call by using JQuery selector InitGallery(...).
+First must create a div object and then call by using JQuery selector InitGallery(...).
 
 
         ***Init FotoGallery example***
 
-         <div id = 'foto'></div>
+         <div class = 'foto'></div>
 
-         $('#id').InitGallery(...)
+         $('div.foto').InitGallery(...)
 
 
 
@@ -37,6 +49,7 @@ InitGallery() takes two arguments:
     1 - array contains a images file paths
 
         for example : 
+
         arrSrc =[
 
             ".../img1.jpg",
@@ -64,8 +77,93 @@ InitGallery() takes two arguments:
                  'numeric'  - title contain a index of current image for example : "2/10"
                  'none'     - component not have a title
 
+Last step is add GalleryResize() callback function to Body elemnt in html document as below:
+
+            ***Add GalleryResize() callback function example***
+
+                    <BODY onresize = "GalleryResize()">
+
+                                    or
+
+                    <script type = "text/javascript">
+                         
+                         function BodyResize(){
+                            ...
+                            GalleryResize();
+                         }
+
+                    </script>
+
+                    <BODY onresize = "BodyResize()">
+
+You can also create a mini slider wich contains a small images. Minislider require that Gallery must be created first.
+
+To init a minislider must call InitMinislider() from JQuery div selector
+
+It's takes two arguments:
+
+    1 - amount of small images in single view
+    2 - string that contains "vertical" or "horizontal" mode
+
+Below is example how perform initation of mini slider component
+
+         ***Mini slider initation example***
 
 
+                <div class = 'minislider'></div>
+
+                $('div.minislider').InitMinislider(4, "vertical");
+
+
+
+Below is a full example wich show a initation procedures to create gallery and mini slider component :
+
+
+
+                        ***Initation FotoGallery full example***
+
+                        -Html Document-
+
+            <BODY onresize = "GalleryResize()">
+
+                <div class = 'foto'></div>
+                <div class = 'MiniSlider'></div>
+
+
+            </BODY>
+
+
+                        -Java script source-
+
+            const imgSrc = [
+                                "./Gallery/1.jpg",
+                                "./Gallery/2.jpg",
+                                "./Gallery/3.jpg",
+                                "./Gallery/4.jpg",
+                                "./Gallery/5.jpg",
+                                "./Gallery/6.jpg",
+                                "./Gallery/7.jpg",
+                                "./Gallery/8.jpg",
+                                "./Gallery/9.jpg",
+                                "./Gallery/10.jpg"
+                            ]
+            
+
+            $(document).ready(() => {
+
+
+                                    $('div.foto').InitGallery(imgSrc, {
+
+                                        "Header" : 'rgb(34, 33, 35)',
+                                        "Border" : 'rgb(20, 18, 22)',
+                                        "Footer" : 'rgb(34, 33, 35)',
+                                        "Text"  : 'rgb(239, 137, 12)',
+                                        "Title" : 'source'
+                                    });
+
+                                    $('div.MiniSlider').InitMinislider(4, "vertical");
+
+                                })
 
 
 
