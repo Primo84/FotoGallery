@@ -194,6 +194,7 @@ function miniDivClick(event)
     let i;
     let txt = "";
     let txt1 = "";
+    let idx = 0;
 
     if(CurrImg != index)
     {
@@ -220,7 +221,18 @@ function miniDivClick(event)
             else
             {
                 txt = $(ImgArr[CurrImg]).attr('src');
-                txt1 = txt.slice(txt.indexOf("/") + 1, txt.length);
+                
+                idx = txt.length;
+        
+                while(idx != 0)
+                {
+                    idx --;
+                    if(txt[idx] == "\\" || txt[idx] == '/')
+                        break; 
+                    
+                }
+
+                txt1 = txt.slice(idx + 1, txt.length);
             
                 $spanHead.text(txt1);
             }
@@ -345,8 +357,19 @@ function mouseclick(event)
                 else
                 {
                     txt = $(ImgArr[CurrImg]).attr('src');
-                    txt1 = txt.slice(txt.indexOf("/") + 1, txt.length);
-                
+
+                    idx = txt.length;
+        
+                    while(idx != 0)
+                    {
+                        idx --;
+                        if(txt[idx] == "\\" || txt[idx] == '/')
+                            break; 
+                        
+                    }
+
+                    txt1 = txt.slice(idx + 1, txt.length);
+
                     $spanHead.text(txt1);
                 }
 
@@ -441,7 +464,17 @@ function mouseclick(event)
                 else
                 {
                     txt = $(ImgArr[CurrImg]).attr('src');
-                    txt1 = txt.slice(txt.indexOf("/") + 1, txt.length);
+                    idx = txt.length;
+        
+                    while(idx != 0)
+                    {
+                        idx --;
+                        if(txt[idx] == "\\" || txt[idx] == '/')
+                            break; 
+                        
+                    }
+
+                    txt1 = txt.slice(idx + 1, txt.length);
                 
                     $spanHead.text(txt1);
                 }
@@ -516,6 +549,7 @@ function ImgLoop(src)
    let Img = new Image();
    let txt = "";
    let txt1 = "";
+   let idx;
 
    Img.src = src;
 
@@ -538,8 +572,17 @@ function ImgLoop(src)
    else
    {
         txt = $(ImgArr[0]).attr('src');
-        index = txt.indexOf('/');
-        txt1 = txt.slice(txt.indexOf("/") + 1, txt.length);
+        idx = txt.length;
+        
+        while(idx != 0)
+        {
+            idx --;
+            if(txt[idx] == "\\" || txt[idx] == '/')
+                break; 
+            
+        }
+
+        txt1 = txt.slice(idx + 1, txt.length);
 
         $spanHead.text(txt1);
    }
