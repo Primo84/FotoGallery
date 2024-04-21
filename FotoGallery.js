@@ -218,7 +218,7 @@ function miniDivClick(event)
 
             if(Gallery_Attr['Title'] == "numeric")
                 $spanHead.text(`${CurrImg+1}/${ImgArr.length}`);
-            else
+            else if(Gallery_Attr['Title'] == "source")
             {
                 txt = $(ImgArr[CurrImg]).attr('src');
                 
@@ -236,6 +236,7 @@ function miniDivClick(event)
             
                 $spanHead.text(txt1);
             }
+            else $spanHead.text("");
         
 
 
@@ -354,7 +355,7 @@ function mouseclick(event)
 
                 if(Gallery_Attr['Title'] == "numeric")
                     $spanHead.text(`${CurrImg+1}/${ImgArr.length}`);
-                else
+                else if(Gallery_Attr['Title'] == "source")
                 {
                     txt = $(ImgArr[CurrImg]).attr('src');
 
@@ -372,6 +373,7 @@ function mouseclick(event)
 
                     $spanHead.text(txt1);
                 }
+                else $spanHead.text("")
 
                 if(ImgMiniArr.length <= 0 ) 
                 {
@@ -461,7 +463,7 @@ function mouseclick(event)
 
                 if(Gallery_Attr['Title'] == "numeric")
                     $spanHead.text(`${CurrImg+1}/${ImgArr.length}`);
-                else
+                else if(Gallery_Attr['Title'] == "source")
                 {
                     txt = $(ImgArr[CurrImg]).attr('src');
                     idx = txt.length;
@@ -478,6 +480,7 @@ function mouseclick(event)
                 
                     $spanHead.text(txt1);
                 }
+                else $spanHead.text("");
 
                 if(ImgMiniArr.length <= 0 ) 
                 {
@@ -569,7 +572,7 @@ function ImgLoop(src)
 
     if(Gallery_Attr['Title'] == "numeric")
         $spanHead.text(`1/${ImgArr.length}`);
-   else
+   else if(Gallery_Attr['Title'] == "source")
    {
         txt = $(ImgArr[0]).attr('src');
         idx = txt.length;
@@ -586,6 +589,7 @@ function ImgLoop(src)
 
         $spanHead.text(txt1);
    }
+   else $spanHead.text("");
 
    
 
@@ -610,7 +614,11 @@ $.fn.InitGallery = function(ImgSrc = [], GalleryAttr={
     Gallery_Attr['Border'] = GalleryAttr['Border'];
     Gallery_Attr['Footer'] = GalleryAttr['Footer'];
     Gallery_Attr['Text'] = GalleryAttr['Text'];
-    Gallery_Attr['Title'] = GalleryAttr['Title'];
+    
+    if(GalleryAttr['Title'] != 'source' && GalleryAttr['Title'] != 'numeric')
+        Gallery_Attr['Title'] = 'none';
+    else
+        Gallery_Attr['Title'] = GalleryAttr['Title'];
 
     // $divObj.css(Gallery_Attr);
 
