@@ -12,13 +12,13 @@ Here is a full code a FotoGallery component....
         
 
 
-FotoGallery is a component to create a images view scroller.
+FotoGallery is a component, to create a images view scroller.
 
 It's created from JavaScript and JQuery code.
 
-To use must join JQuery libs first, and FotoGalerry.js and FotoGallery.css files.
+To use, must join JQuery libs first, and FotoGalerry.js and FotoGallery.css files.
 
-Below is example how join mantadory files and libs to use a FotoGallery component.
+Below is example how join mantadory files, and libs to use a FotoGallery component.
 
         ***Join JQuery and FotoGallery libs example***
 
@@ -31,9 +31,9 @@ Below is example how join mantadory files and libs to use a FotoGallery componen
         <script src = "https://primo84.github.io/FotoGallery/FotoGallery.js" type ="text/javascript"></script>
 
 
-Gallery component is created by calling InitGallery(...) function from  JQuery div selector.
+Gallery component is creating by calling InitGallery(...) function, from JQuery div selector.
 
-First must create a div object and then call by using JQuery selector InitGallery(...).
+First must create a div object, and then call by using JQuery selector InitGallery(...).
 
 
         ***Init FotoGallery example***
@@ -44,7 +44,7 @@ First must create a div object and then call by using JQuery selector InitGaller
 
 
 
-InitGallery() takes two arguments:
+InitGallery() takes two parameters:
 
     1 - array contains a images file paths
 
@@ -116,7 +116,7 @@ Below is example how perform initation of mini slider component
 
 
 
-Below is a full example wich show a initation procedures to create gallery and mini slider component :
+Below is a full example, wich show a initation procedures to create gallery and mini slider component :
 
 
 
