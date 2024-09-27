@@ -3,7 +3,7 @@
 
 Click link below to see how it's work...
 
-    https://www.piccante.opole.pl/Galery.html
+    https://primo84.github.io/Piccante/Galery.html
 
 
 Here is a full code a FotoGallery component....
